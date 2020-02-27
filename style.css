@@ -31,6 +31,7 @@
     clear: both;
     height: auto;
     width: auto;
+    display: flex;
     justify-content: center;
     align-content: center;
     justify-self: stretch;
@@ -42,7 +43,6 @@
     justify-content: center;
     /* align-content: center; */
     background-color: grey;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding: 10px 15px;
 }
