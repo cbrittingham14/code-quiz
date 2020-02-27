@@ -36,9 +36,11 @@
     justify-self: stretch;
 }
 .card{
-    max-width: 400px;
-    min-height: 100px;
-    align-content: center;
+    max-width: 600px;
+    min-height: 200px;
+    /* text-align: center; */
+    justify-content: center;
+    /* align-content: center; */
     background-color: grey;
     margin-left: auto;
     margin-right: auto;
