@@ -1,0 +1,46 @@
+.wrapper{
+    display: flex;
+    flex: 1 100%;
+    /* align-content: center; */
+}
+.header{
+    flex: 1 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 0px;
+    /* flex-wrap: nowrap; */
+}
+.top-left{
+    width: 50%;
+    align-content: flex-start;
+    /* flex-direction: row; */
+}
+.spacer{
+    flex-grow: 10;
+}
+.top-right{
+    width: 50%;
+    text-align: right;
+    /* align-content: right; */
+    justify-content: flex-end;
+    /* flex-direction: row; */
+}
+.card-holder{
+    clear: both;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    justify-self: stretch;
+}
+.card{
+    max-width: 400px;
+    min-height: 100px;
+    align-content: center;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 15px;
+}
