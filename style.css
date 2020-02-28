@@ -1,7 +1,6 @@
 .wrapper{
     display: flex;
     flex: 1 100%;
-    /* align-content: center; */
 }
 .header{
     flex: 1 100%;
@@ -10,12 +9,11 @@
     justify-content: space-between;
     width: 100%;
     margin: 0px 0px;
-    /* flex-wrap: nowrap; */
+
 }
 .top-left{
     width: 50%;
     align-content: flex-start;
-    /* flex-direction: row; */
 }
 .spacer{
     flex-grow: 10;
@@ -23,9 +21,7 @@
 .top-right{
     width: 50%;
     text-align: right;
-    /* align-content: right; */
     justify-content: flex-end;
-    /* flex-direction: row; */
 }
 .card-holder{
     clear: both;
@@ -39,9 +35,7 @@
 .card{
     max-width: 600px;
     min-height: 200px;
-    /* text-align: center; */
     justify-content: center;
-    /* align-content: center; */
     background-color: grey;
     margin: auto;
     padding: 10px 15px;
