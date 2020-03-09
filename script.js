@@ -10,6 +10,7 @@ var buttonHolder = document.getElementById("button-div");
 var interval;
 var onHighScore = false;
 var skipPrompt = false;
+var quizIsStarted = false;
 var score;
 var initalTime = 100;
 var questionIndex = 0;
@@ -48,18 +49,29 @@ const init = function(){
     onHighScore = false;
     skipPrompt = false;
 
-    interval = setInterval(function(){
-        initalTime--
-        if (initalTime === 0){
-            clearInterval(interval);
-            alert("You lost! You suck! No scores for you! But you're gonna try again");
-            init()
-        }
-        timeEl.textContent = "Time remaining:  " + initalTime;
-    }, 1000)
+    //start button logic
+    if (!quizIsStarted){
+        quizIsStarted = true;
+        questionText.textContent = "Code Quiz";
+        h1El.textContent = "";
+        var btn = document.createElement('button');
+        btn.textContent = "Start Quiz"
+        buttonHolder.append(btn);
+        btn.addEventListener("click", function(event){
+            event.preventDefault();
 
-    setQuestion(questionIndex);
-   
+            interval = setInterval(function(){
+                initalTime--
+                if (initalTime === 0){
+                    clearInterval(interval);
+                    alert("You lost! You suck! No scores for you! But you're gonna try again");
+                    init()
+                }
+                timeEl.textContent = "Time remaining:  " + initalTime;
+            }, 1000)
+            setQuestion(questionIndex);
+        })
+    }
 }
 //
 const clickHandler = function(){
@@ -100,6 +112,7 @@ const setQuestion = function(index){
 const endGame = function(){
 
     onHighScore = true;
+    quizIsStarted = false;
     highScoreEl.innerHTML = "Restart Quiz";
 
     //reset markup and timer
@@ -149,7 +162,7 @@ const endGame = function(){
     }
 }
 init();
-setQuestion(questionIndex);
+// setQuestion(questionIndex);
 
 //handel highscore link without new html page
 highScoreEl.addEventListener("click", function(){
