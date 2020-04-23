@@ -10,6 +10,7 @@ it can be compared to future scores.
 
 ![quizshot](/images/code-quiz1.png)
 ![quitshot2](/images/code-quiz2.png)
+![quizshot3](/images/screenshot.png)
 
 ## Acknowledgements
 
